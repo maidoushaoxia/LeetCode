@@ -1,2 +1,1 @@
-# LeetCode
-JavaScript版本
+# LeetCode JavaScript语言#
