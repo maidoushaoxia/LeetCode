@@ -1,3 +1,10 @@
+/*
+ * @Author: shaoyun
+ * @Date: 2019-08-15 11:11:18
+ * @LastEditors: shaoyun
+ * @LastEditTime: 2019-08-15 15:20:19
+ * @Description: 
+ */
 /**
  * @param {number} x
  * @return {boolean}
@@ -41,3 +48,17 @@ var isPalindrome = function(x) {
   }
 };
 console.log(isPalindrome(121));
+
+/**
+ * @description: 数组方法,reverse()是修改原数组，比较数组是否相等，必须遍历，不能直接比较 ，324ms
+ * @param {type} 
+ * @return: 
+ */
+var isPalindrome = function(x) {
+  if (x < 0) {
+      return false
+  }
+  let str = x.toString()
+  let arr = str.split('')
+  return str === arr.reverse().join('') ? true : false
+};
