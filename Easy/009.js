@@ -2,7 +2,7 @@
  * @Author: shaoyun
  * @Date: 2019-08-15 11:11:18
  * @LastEditors: shaoyun
- * @LastEditTime: 2019-08-15 15:20:19
+ * @LastEditTime: 2019-08-21 12:38:52
  * @Description: 
  */
 /**
@@ -50,7 +50,7 @@ var isPalindrome = function(x) {
 console.log(isPalindrome(121));
 
 /**
- * @description: 数组方法,reverse()是修改原数组，比较数组是否相等，必须遍历，不能直接比较 ，324ms
+ * @description: 数组方法,reverse()是修改原数组，可以比较字符串是否相等 ，324ms
  * @param {type} 
  * @return: 
  */
