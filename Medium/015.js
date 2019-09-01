@@ -14,7 +14,6 @@ var threeSum = function(nums) {
     let len = nums.length
     // 首先对数组排序
     nums = nums.sort((a, b) => (a - b))
-    debugger
     // 保证数组有正负数
     if (nums[0] <= 0 && nums[len - 1] >= 0) {
       let i = 0
