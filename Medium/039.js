@@ -2,7 +2,7 @@
  * @Author: shaoyun
  * @Date: 2019-09-14 21:14:07
  * @LastEditors: shaoyun
- * @LastEditTime: 2019-09-14 21:41:56
+ * @LastEditTime: 2019-09-15 20:21:37
  * @Description: 组合总和——回溯算法
  */
 /**
@@ -14,7 +14,6 @@ var combinationSum = function(candidates, target) {
     candidates.sort((a, b) => (a - b))
     var res = []
     var path = []
-    debugger
     getSum(0, candidates, target, path)
 
     function getSum (start, candidates, target, path) {
