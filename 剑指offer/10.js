@@ -4,6 +4,7 @@
  * @return {number}
  */
 var minArray = function(numbers) {
+  // 二分法, 76ms
   // 寻找右排序数组的首个元素
   let i = 0, j = numbers.length - 1
   while(i !== j) {
@@ -20,4 +21,7 @@ var minArray = function(numbers) {
     }
   }
   return numbers[i]
+
+  // 数组解构赋值, 64ms
+  // return Math.min(...numbers)
 };
