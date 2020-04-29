@@ -19,16 +19,16 @@ var cuttingRope = function(n) {
 
   // 动态规划，68ms
   // 初始化dp数组，长度为n + 1比较方便
-  let dp = new Array(n + 1).fill(0)
-  // 出口为n = 2
-  dp[2] = 1
-  for (let i = 3; i <= n; i++) {
-    for(let j = 1; j < i; j++) {
-      // 首先是本次拆分结果的比较j * (i - j)与j * dp[i - j]，然后与上一次的比较
-      // dp[i] = Math.max(dp[i], Math.max(j * dp[i - j], j * (i - j)))
-      // 简化
-      dp[i] = Math.max(dp[i], j * dp[i - j], j * (i - j))
-    }
-  }
-  return dp[n]
+  // let dp = new Array(n + 1).fill(0)
+  // // 出口为n = 2
+  // dp[2] = 1
+  // for (let i = 3; i <= n; i++) {
+  //   for(let j = 1; j < i; j++) {
+  //     // 首先是本次拆分结果的比较j * (i - j)与j * dp[i - j]，然后与上一次的比较
+  //     // dp[i] = Math.max(dp[i], Math.max(j * dp[i - j], j * (i - j)))
+  //     // 简化
+  //     dp[i] = Math.max(dp[i], j * dp[i - j], j * (i - j))
+  //   }
+  // }
+  // return dp[n]
 };
