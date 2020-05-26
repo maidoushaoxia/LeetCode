@@ -1,18 +1,27 @@
 /**
- * @description: 斐波那契数列
- * @param {number} n
+ * @description: 旋转数组的最小数字
+ * @param {number[]} numbers
  * @return {number}
  */
-var fib = function(n) {
-  // 使用动态规划
-  let dp = [0, 1]
-
-  if (n <= 1) return dp[n]
-
-  for (let i = 2; i <= n; i++) {
-    dp[2] = (dp[0] + dp[1]) % (1e9 + 7)
-    dp[0] = dp[1]
-    dp[1] = dp[2]
+var minArray = function(numbers) {
+  // 二分法, 76ms
+  // 寻找右排序数组的首个元素
+  let i = 0, j = numbers.length - 1
+  while(i !== j) {
+    let m = Math.floor((i + j) / 2)
+    if (numbers[m] > numbers[j]) {
+      // m在左排序数组中，旋转点在[m+1, j]中
+      i = m + 1
+    } else if (numbers[m] < numbers[j]) {
+      // m在右排序数组中，旋转点在[i, m]中
+      j = m
+    } else if (numbers[m] === numbers[j]) {
+      // 无法判断m在那个数组
+      j --
+    }
   }
-  return dp[2]
+  return numbers[i]
+
+  // 数组解构赋值, 64ms
+  // return Math.min(...numbers)
 };
