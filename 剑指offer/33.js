@@ -5,6 +5,7 @@
  */
 var verifyPostorder = function(postorder) {
   return recur(postorder, 0, postorder.length - 1)
+
   /**
    * @description: 二叉搜索树递归函数
    * @param {number[]} postorder 
